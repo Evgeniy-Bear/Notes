@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">NotesApp</string>
+    <string name="TextViewTextSize">22sp</string>
+    <string name="first_note_title">заметка 1</string>
+    <string name="first_note_content">Content note 1</string>
+    <string name="second_note_title">заметка 2</string>
+    <string name="second_note_content">Content note 2</string>
+    <string name="third_note_title">заметка 3</string>
+    <string name="third_note_content">Content note 3</string>
+    <string name="note_title">Node title</string>
+    <string name="note_content">Note content</string>
 </resources>

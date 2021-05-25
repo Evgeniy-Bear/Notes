@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="TextViewTextSize">20sp</dimen>
+    <dimen name="TextView_Layout_MarginTop">22dp</dimen>
+</resources>
