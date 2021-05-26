@@ -24,6 +24,8 @@
     <string name="note_title">Node title</string>
     <string name="note_content">Note content</string>
     <string name="menu_search">поиск</string>
+    <string name="menu_add_note">добавить заметку</string>
+    <string name="menu_delete_note">удалить заметку</string>
     <string name="menu_sort">Sort</string>
     <string name="menu_send">отправить</string>
     <string name="menu_add_photo">добавить фото</string>
