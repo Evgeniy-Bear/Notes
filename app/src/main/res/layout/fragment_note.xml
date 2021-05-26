@@ -4,7 +4,6 @@
     android:id="@+id/note_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_fragment_note"
     android:orientation="vertical"
     tools:context=".NoteFragment">
 
@@ -12,25 +11,25 @@
         android:id="@+id/note_date_of_creation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/TextView_Layout_MarginTop"
+        android:layout_marginTop="22dp"
         android:textAlignment="center" />
 
-    <TextView
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/note_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/TextView_Layout_MarginTop"
+        android:layout_marginTop="22dp"
         android:gravity="center"
         android:hint="@string/note_title"
-        android:textSize="@dimen/TextViewTextSize" />
+        android:textSize="22sp" />
 
-    <TextView
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/note_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/TextView_Layout_MarginTop"
+        android:layout_marginTop="22dp"
         android:gravity="center"
-        android:textSize="@dimen/TextViewTextSize"
+        android:textSize="22sp"
         tools:text="@string/note_content" />
 
 </LinearLayout>

@@ -7,16 +7,33 @@
     <string name="second_note_content">Content note 2</string>
     <string name="third_note_title">заметка 3</string>
     <string name="third_note_content">Content note 3</string>
+    <string name="fourth_note_title">заметка 4</string>
+    <string name="fourth_note_content">Content note 4</string>
+    <string name="fifth_note_title">заметка 5</string>
+    <string name="fifth_note_content">Content note 5</string>
+    <string name="sixth_note_title">заметка 6</string>
+    <string name="sixth_note_content">Content note 6</string>
+    <string name="seventh_note_title">заметка 7</string>
+    <string name="seventh_note_content">Content note 7</string>
+    <string name="eighth_note_title">заметка 8</string>
+    <string name="eighth_note_content">Content note 8</string>
+    <string name="ninth_note_title">заметка 9</string>
+    <string name="ninth_note_content">Content note 9</string>
+    <string name="tenth_note_title">заметка 10</string>
+    <string name="tenth_note_content">Content note 10</string>
     <string name="note_title">Node title</string>
     <string name="note_content">Note content</string>
-    <string name="menu_search">Search</string>
+    <string name="menu_search">поиск</string>
     <string name="menu_sort">Sort</string>
-    <string name="menu_send">Send</string>
-    <string name="menu_add_photo">Add photo</string>
+    <string name="menu_send">отправить</string>
+    <string name="menu_add_photo">добавить фото</string>
     <string name="example">Gennadith.bear@gmail.com</string>
     <string name="icon_android">Icon android</string>
     <string name="about">About</string>
     <string name="settings">Settings</string>
     <string name="drawer_open">Open navigation</string>
     <string name="drawer_close">Close navigation</string>
+    <string name="item">item of RV</string>
+    <string name="date_of_item">date of item</string>
+
 </resources>
