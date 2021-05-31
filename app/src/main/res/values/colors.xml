@@ -9,4 +9,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="color_fragment_list_of_notes">#ffe4e1</color>
     <color name="color_fragment_note">#d9cee3</color>
+    <color name="medium_purple">#9370DB</color>
+    <color name="medium_slate_blue">#7B68EE</color>
+    <color name="slate_blue">#6A5ACD</color>
+    <color name="darks_late_blue">#483D8B</color>
+    <color name="rebecca_purplee">#663399</color>
+    <color name="indigo">#4B0082</color>
+    <color name="colorText">#1E0A4A</color>
 </resources>

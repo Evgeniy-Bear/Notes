@@ -10,35 +10,36 @@ public class Note implements Parcelable {
     private String title;
     private String content;
     private Calendar creationDate;
+    private int color;
 
-    public Note(String title, String content, Calendar creationDate) {
+    public Note(String title, String content, Calendar creationDate, int color) {
         this.title = title;
         this.content = content;
         this.creationDate = creationDate;
+        this.color = color;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
 
     public String getContent() {
         return content;
     }
 
-    public void setContent(String content) {
-        this.content = content;
-    }
 
     public Calendar getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(Calendar creationDate) {
-        this.creationDate = creationDate;
+
+    public int getColor() {
+        return color;
+    }
+
+    public void setColor(int color) {
+        this.color = color;
     }
 
     public static final Creator<Note> CREATOR = new Creator<Note>() {

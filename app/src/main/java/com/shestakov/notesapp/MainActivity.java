@@ -3,6 +3,7 @@ package com.shestakov.notesapp;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,7 +11,6 @@ import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
@@ -18,43 +18,49 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity implements MenuItem.OnMenuItemClickListener {
 
-    private DrawerLayout drawer;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.list_of_notes_fragment_container, new ListOfNotesFragment());
+        fragmentTransaction.commit();
+        Toolbar toolbar = initToolbar();
+        initDrawer(toolbar);
+    }
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        if (savedInstanceState == null) {
-            initStartFragment();
-        }
-
-        drawer = findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.drawer_open, R.string.drawer_close);
+    private void initDrawer(Toolbar toolbar) {
+        final DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar,
+                R.string.drawer_open,
+                R.string.drawer_close);
         drawer.addDrawerListener(toggle);
+        toggle.syncState();
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(item -> {
-            if (item.getItemId() == R.id.nav_about) {
-                Snackbar.make(findViewById(R.id.drawer_layout), "About", Snackbar.LENGTH_SHORT).show();
-            } else {
-                Snackbar.make(findViewById(R.id.drawer_layout), "Settings", Snackbar.LENGTH_SHORT).show();
+            int id = item.getItemId();
+            if (navigateMenu(id)) {
+                drawer.closeDrawer(GravityCompat.START);
+                return true;
             }
-            drawer.closeDrawer(GravityCompat.START);
-            return true;
+            return false;
         });
-        toggle.syncState();
+    }
+    private boolean navigateMenu(int id) {
+        switch (id) {
+            case R.id.nav_settings:
+                Toast.makeText(this, getResources().getString(R.string.settings), Toast.LENGTH_LONG).show();
+                return true;
+            case R.id.nav_about:
+                Toast.makeText(this, getResources().getString(R.string.about), Toast.LENGTH_LONG).show();
+                return true;
+        }
+        return false;
     }
 
-    private void initStartFragment() {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        ListOfNotesFragment listFragment = new ListOfNotesFragment();
-        fragmentTransaction.add(R.id.list_of_notes_fragment_container, listFragment);
-        fragmentTransaction.commit();
-    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -88,12 +94,11 @@ public class MainActivity extends AppCompatActivity implements MenuItem.OnMenuIt
         return false;
     }
 
-    @Override
-    public void onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
+    private Toolbar initToolbar() {
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        return toolbar;
     }
+
+
 }
