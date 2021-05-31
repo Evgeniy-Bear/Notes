@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="color_fragment_list_of_notes">#ffe4e1</color>
     <color name="color_fragment_note">#d9cee3</color>
+    <color name="colorText">#1E0A4A</color>
 </resources>
