@@ -23,25 +23,16 @@ public class Note implements Parcelable {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
 
     public String getContent() {
         return content;
     }
 
-    public void setContent(String content) {
-        this.content = content;
-    }
 
     public Calendar getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(Calendar creationDate) {
-        this.creationDate = creationDate;
-    }
 
     public int getColor() {
         return color;
