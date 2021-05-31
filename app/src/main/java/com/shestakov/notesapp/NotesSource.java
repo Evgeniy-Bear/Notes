@@ -59,22 +59,8 @@ public class NotesSource implements Parcelable {
                         getDateOfCreation(), getColor()),
                 new Note(resources.getString(R.string.fifth_note_title),
                         resources.getString(R.string.fifth_note_content),
-                        getDateOfCreation(), getColor()),
-                new Note(resources.getString(R.string.sixth_note_title),
-                        resources.getString(R.string.sixth_note_content),
-                        getDateOfCreation(), getColor()),
-                new Note(resources.getString(R.string.seventh_note_title),
-                        resources.getString(R.string.seventh_note_content),
-                        getDateOfCreation(), getColor()),
-                new Note(resources.getString(R.string.eighth_note_title),
-                        resources.getString(R.string.eighth_note_content),
-                        getDateOfCreation(), getColor()),
-                new Note(resources.getString(R.string.ninth_note_title),
-                        resources.getString(R.string.ninth_note_content),
-                        getDateOfCreation(), getColor()),
-                new Note(resources.getString(R.string.tenth_note_title),
-                        resources.getString(R.string.tenth_note_content),
                         getDateOfCreation(), getColor())
+
 
         };
         Collections.addAll(notes, notesArray);
