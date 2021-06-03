@@ -1,6 +1,5 @@
 package com.shestakov.notesapp.ui;
 
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,7 +23,6 @@ import com.google.android.material.button.MaterialButton;
 import com.shestakov.notesapp.MainActivity;
 import com.shestakov.notesapp.Navigation;
 import com.shestakov.notesapp.R;
-
 
 public class StartFragment extends Fragment {
 
@@ -87,7 +85,7 @@ public class StartFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(requireContext());
+        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(getContext());
         if (account != null) {
             disableSign();
             updateUI(account.getEmail());
