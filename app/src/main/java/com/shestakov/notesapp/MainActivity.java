@@ -5,18 +5,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.FragmentTransaction;
 
-import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.snackbar.Snackbar;
+import com.shestakov.notesapp.observe.Publisher;
+import com.shestakov.notesapp.ui.StartFragment;
 
 import java.util.Objects;
+
 
 public class MainActivity extends AppCompatActivity {
     private Navigation navigation;
@@ -28,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         navigation = new Navigation(getSupportFragmentManager());
         initToolbar();
-        getNavigation().addFragment(ListOfNotesFragment.newInstance(), false);
+        getNavigation().addFragment(StartFragment.newInstance(), false);
     }
 
     private void initToolbar() {

@@ -1,4 +1,6 @@
-package com.shestakov.notesapp;
+package com.shestakov.notesapp.observe;
+
+import com.shestakov.notesapp.data.Note;
 
 import java.util.ArrayList;
 import java.util.List;
