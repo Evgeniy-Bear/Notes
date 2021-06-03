@@ -3,7 +3,6 @@ package com.shestakov.notesapp.data;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-
 public class Note implements Parcelable {
     public static final Creator<Note> CREATOR = new Creator<Note>() {
         @Override

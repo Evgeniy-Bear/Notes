@@ -1,6 +1,5 @@
 package com.shestakov.notesapp.data;
 
-
 import android.util.Log;
 
 import com.google.firebase.firestore.CollectionReference;
@@ -12,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-
 
 public class NotesSourceFirebase implements NotesSourceInterface {
 
@@ -77,4 +75,3 @@ public class NotesSourceFirebase implements NotesSourceInterface {
                 (documentReference -> note.setId(documentReference.getId()));
     }
 }
-

@@ -14,7 +14,6 @@ import com.shestakov.notesapp.ui.StartFragment;
 
 import java.util.Objects;
 
-
 public class MainActivity extends AppCompatActivity {
     private Navigation navigation;
     private Publisher publisher = new Publisher();
@@ -65,21 +64,6 @@ public class MainActivity extends AppCompatActivity {
             public boolean onQueryTextChange(String newText) {
                 return true;
             }
-        });
-        MenuItem sort = menu.findItem(R.id.menu_sort);
-        sort.setOnMenuItemClickListener(item -> {
-            Toast.makeText(MainActivity.this, R.string.menu_sort, Toast.LENGTH_SHORT).show();
-            return true;
-        });
-        MenuItem send = menu.findItem(R.id.menu_send);
-        send.setOnMenuItemClickListener(item -> {
-            Toast.makeText(MainActivity.this, R.string.menu_send, Toast.LENGTH_SHORT).show();
-            return true;
-        });
-        MenuItem addPhoto = menu.findItem(R.id.menu_add_photo);
-        addPhoto.setOnMenuItemClickListener(item -> {
-            Toast.makeText(MainActivity.this, R.string.menu_add_photo, Toast.LENGTH_SHORT).show();
-            return true;
         });
         return true;
     }

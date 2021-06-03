@@ -1,4 +1,5 @@
 package com.shestakov.notesapp.data;
+
 import android.content.res.Resources;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -62,8 +63,7 @@ public class NotesSource implements NotesSourceInterface, Parcelable {
                         getDateOfCreation()),
                 new Note(resources.getString(R.string.fifth_note_title),
                         resources.getString(R.string.fifth_note_content),
-                        getDateOfCreation())
-
+                        getDateOfCreation()),
 
         };
         Collections.addAll(notes, notesArray);
@@ -105,4 +105,3 @@ public class NotesSource implements NotesSourceInterface, Parcelable {
                 formatter.format(Calendar.getInstance().getTime()));
     }
 }
-

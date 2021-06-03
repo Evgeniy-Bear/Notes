@@ -17,7 +17,6 @@ import com.shestakov.notesapp.data.NotesSourceInterface;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 
-
 public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> {
     private final Fragment fragment;
     private NotesSourceInterface dataSource;
@@ -44,7 +43,8 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
     @NonNull
     @Override
     public NotesAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent, false);
+        View v = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.item, parent, false);
         return new ViewHolder(v);
     }
 
